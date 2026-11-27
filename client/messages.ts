@@ -1,17 +1,12 @@
 import { defineTranslations } from "@getpaseo/plugin/client";
+import { KIND_LABELS } from "../shared/labels";
 
 const en = {
   title: "Resets",
   refresh: "Refresh",
   loading: "Checking your resets…",
   providers: { codex: "Codex", claude: "Claude" },
-  kinds: {
-    full: "Full reset",
-    weekly: "Weekly reset",
-    session: "5-hour reset",
-    fable: "Fable reset",
-    other: "Reset",
-  },
+  kinds: KIND_LABELS.en,
   help: {
     codex: "Refills your Codex limits.",
     full: "Refills your 5-hour and weekly limits.",
@@ -49,18 +44,12 @@ const en = {
   },
 };
 
-const es: typeof en = {
+const es: Omit<typeof en, "kinds"> & { kinds: typeof KIND_LABELS.es } = {
   title: "Resets",
   refresh: "Actualizar",
   loading: "Mirando tus resets…",
   providers: { codex: "Codex", claude: "Claude" },
-  kinds: {
-    full: "Reset completo",
-    weekly: "Reset semanal",
-    session: "Reset de 5 h",
-    fable: "Reset de Fable",
-    other: "Reset",
-  },
+  kinds: KIND_LABELS.es,
   help: {
     codex: "Rellena tus límites de Codex.",
     full: "Rellena tus límites de 5 h y semanal.",

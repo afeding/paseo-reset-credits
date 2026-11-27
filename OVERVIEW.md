@@ -1,6 +1,8 @@
 Shows the rate limit resets you have banked on Codex and Claude, and lets you spend one from Paseo.
 
-A Resets row in the sidebar footer shows how many resets each account has. Press it to see each kind of reset, how many you have and when the next one expires, with a Use button. Using a reset asks for confirmation first.
+Small chips in the sidebar footer show how many resets each account has and when the next one expires. Press one to see each kind of reset with a Use button. Using a reset asks for confirmation first.
+
+The plugin also adds a Resets card to Paseo's Usage window, listing each kind of reset, how many you have and when it expires. Paseo's Usage window cannot hold plugin buttons, so resets are used from the sidebar chips.
 
 ## Reset kinds
 
@@ -24,3 +26,4 @@ Requires Paseo 0.18 or later.
 - The plugin never refreshes a login. If the Claude token has expired, open Claude Code once to renew it.
 - Codex and Claude do not document these reset endpoints. They can change without notice; the plugin follows what the official clients do.
 - Each attempt uses an idempotency key, so retrying after an error never spends a second reset.
+- Readings are cached for a minute (Codex) or five minutes (Claude), because Claude rate limits its usage endpoint.
