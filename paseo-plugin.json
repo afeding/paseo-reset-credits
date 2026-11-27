@@ -1,0 +1,9 @@
+{
+  "id": "paseo-reset-credits",
+  "name": "Reset credits",
+  "description": "See and use your banked Codex and Claude rate limit resets",
+  "media": [],
+  "requirements": {
+    "paseo": ">=0.18.0"
+  }
+}
